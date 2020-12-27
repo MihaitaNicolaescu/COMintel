@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>COMintel</display-name>
+  <welcome-file-list>
+    <welcome-file>index</welcome-file>
+  </welcome-file-list>
+  
+  <filter>
+  	<display-name>AuthFilter</display-name>
+  	<filter-name>AuthFilter</filter-name>
+  	<filter-class>daw.controller.AuthFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>AuthFilter</filter-name>
+  	<url-pattern>/private/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+  	<display-name>Index</display-name>
+  	<servlet-name>IndexServlet</servlet-name>
+  	<servlet-class>daw.controller.IndexServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<display-name>Abonamente</display-name>
+  	<servlet-name>AbonamenteServlet</servlet-name>
+  	<servlet-class>daw.controller.AbonamenteServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<display-name>EditareAbonament</display-name>
+  	<servlet-name>EditareAbonamentServlet</servlet-name>
+  	<servlet-class>daw.controller.EditareAbonamentServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<display-name>EditareAbonat</display-name>
+  	<servlet-name>EditareAbonatServlet</servlet-name>
+  	<servlet-class>daw.controller.EditareAbonatServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<display-name>Factura</display-name>
+  	<servlet-name>FacturaServlet</servlet-name>
+  	<servlet-class>daw.controller.FacturaServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<display-name>Login</display-name>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<servlet-class>daw.controller.LoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<display-name>Register</display-name>
+  	<servlet-name>RegisterServlet</servlet-name>
+  	<servlet-class>daw.controller.RegisterServlet</servlet-class>
+  </servlet>
+</web-app>
